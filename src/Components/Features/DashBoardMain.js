@@ -215,7 +215,7 @@ const DashBoardMain = () => {
           <div className='w-2/5 h-96 bg-gray-100 rounded-lg shadow-xl border-2  max-sm:w-full max-sm:h-fu'>
             <p className='text-blanced text-center  font-semibold'>lorem</p>
           </div>
-      </div>
+  </div>
 
 
       </div>

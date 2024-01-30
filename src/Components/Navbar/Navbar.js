@@ -1,6 +1,17 @@
 import React from 'react';
+import Button from '../Button';
+import { useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 const Navbar = () => {
+  const [cookies, removeCookie] = useCookies(['loggedIn']);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    removeCookie('loggedIn');
+    navigate('/');
+  };
+
   return (
     <>
       <nav className='sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-25 border-b border-gray-200  max-sm:max-w-full'>
@@ -18,6 +29,11 @@ const Navbar = () => {
               </li>
               <li className='hover:font-normal font-light'>
                 <button className=''>Contact Us</button>
+              </li>
+              <li>
+                <Button onClick={handleLogout} className='text-sm'>
+                  Log out
+                </Button>
               </li>
 
             </ul>

@@ -2,14 +2,18 @@ import React from 'react'
 import Input from '../Input'
 import Button from '../Button'
 import {useForm} from "react-hook-form"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useCookies } from 'react-cookie';
 
 const Login = () => {
 const {register,handleSubmit ,formState:{errors}} = useForm();
-const navigate = useNavigate()
 
-const loginData =async (data)=>{
-    navigate('/signup')
+const [cookies, setCookie] = useCookies(['loggedIn']);
+
+
+const loginData = (data)=>{
+    
+    setCookie('loggedIn', true, { path: '/' });
     console.log(data);
 }
    
