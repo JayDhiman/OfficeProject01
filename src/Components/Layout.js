@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar';
-import Sideboard from './Sideboard.js/Sideboard';
+import Sideboard from './Sideboard/Sideboard';
 const Layout = ({children}) => {
+    
     return (
     <>
 

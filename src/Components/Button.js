@@ -10,7 +10,7 @@ export default function Button({
     ...props
 }) {
     return (
-        <button onChange={onChange} className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`} {...props}>
+        <button onChange={onChange} className={`p-1 px-3  rounded-lg ${bgColor} ${textColor} ${className}`} {...props}>
             {children}
         </button>
     );

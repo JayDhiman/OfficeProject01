@@ -10,9 +10,9 @@ const DashBoardMain = () => {
 
   return (
   <>
-   <main className='w-full h-fit flex bg-slate-100'>
+   <main className='w-full h-auto  flex bg-slate-100 overflow-y-scroll'>
       
-      <div className={` w-full`} >
+      <div className={` w-full `} >
       <div className='w-full'>
 
        {/* heading */}
@@ -117,7 +117,7 @@ const DashBoardMain = () => {
       {/* Graph section */}
       <div className='px-6 mb-5 pb-5 w-full flex  items-center  gap-5  flex-wrap' >
           <div className='w-1/2 h-96 bg-gray-100 rounded-lg shadow-xl border-2 sm:flex-1 max-sm:w-full max-sm:h-fu'>
-            <p className='text-center font-semibold font-sarif'>Lorem</p>
+            <p className='text-center font-semibold font-sarif'></p>
           </div>
           <div className='w-1/2 h-96 bg-gray-100 rounded-lg shadow-xl border-2 sm:flex-1 max-sm:w-full max-sm:h-fu'>
             <p className='text-blanced text-center font-semibold'>lorem</p>
@@ -127,10 +127,13 @@ const DashBoardMain = () => {
       
     {/* employe count  */}
 
-  <div className={`max-w-[100%] mt-5  pb-8 pt-8 flex max-xl:flex-wrap  max-xl:gap-3 max-xl:items-center max-xl:justify-center mb-3  px-2  mx-auto items-center `}>
+  <div className={`max-w-[100%] mt-5  pb-8 pt-8 flex md:flex-wrap max-md:flex-wrap max-md:flex-row-reverse  gap-3  justify-center  items-center `}>
+    
+
+   
  <div className={`w-72 h-32 bg-slate-100 shadow-xl rounded-lg flex gap-4 sm:flex-wrap justify-evenly items-center border-2 `}>
   <div className='rounded-full bg-orange-100  p-2'>
-   {/* log */} 
+   
    <FaProjectDiagram
    color='orange'
    fontSize={25}
@@ -203,12 +206,17 @@ const DashBoardMain = () => {
   
   </div>
   
-  </div>
+  
 
   </div>
   
 
-  <div className='px-6 mb-5 pb-5 w-full flex  items-center  gap-5  flex-wrap' >
+  
+
+
+  </div>
+
+  <div className='px-6 mb-5 pb-5 w-full flex justify-center items-center  gap-5  flex-wrap' >
           <div className='w-2/5 h-96 bg-gray-100 rounded-lg shadow-xl border-2 mx-5 max-sm:w-full max-sm:h-fu'>
             <p className='text-center font-semibold font-sarif'>Lorem</p>
           </div>
@@ -216,8 +224,6 @@ const DashBoardMain = () => {
             <p className='text-blanced text-center  font-semibold'>lorem</p>
           </div>
   </div>
-
-
       </div>
      </main> 
   </>

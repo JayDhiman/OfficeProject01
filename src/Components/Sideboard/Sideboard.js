@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {Data,Pages,Others} from '../../Data/Data'
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RiMenuUnfoldLine } from 'react-icons/ri';
 
 
 
@@ -23,15 +23,16 @@ const handleActiveLink = (id)=>{
 setActiveLink(id);
 }
   return (
-    <>
-  <aside className='w-fit h-auto '>
-  <div className={`bg-gray-700 text-gray-200 px-3 h-full max-sm:hidden ${sidebarOpen ? 'w-20 duration-300 h-[100%]' : 'w-52 duration-300'} flex flex-col min-h-screen font-semibold`}>
+<>
+
+<aside className='w-fit h-auto '>
+<div className={`bg-gray-700 text-gray-200 px-3 h-full max-sm:hidden ${sidebarOpen ? 'transition-all  w-20 duration-500 h-[100%]' : 'w-52 duration-400 transition-all  overflow-y-scroll'}  flex flex-col min-h-screen font-semibold`}>
   
       
  
-  <div className='flex gap-3'>
+  <div className={`flex gap-3 ${sidebarOpen ? '':''}`}>
 
-  <div className={`${sidebarOpen ? 'hidden duration-200':'block'}`}>
+  <div className={`${sidebarOpen ? 'hidden duration-200':'block'} `}>
   <Link to= '/dashboard'>
      <h1 className={`text-light pt-5 px-3 underline text-xl cursor-pointer`}>Dashboard</h1>
   </Link >
@@ -39,11 +40,11 @@ setActiveLink(id);
       
       <div
         className={`cursor-pointer  border-dark-purple ${
-          !sidebarOpen ? "pt-5 " : "px-12 rotate-180 duration-300 text-white "
-        }`}
+          !sidebarOpen ? "pt-5 duration-300 rotate-0 " : "px-12 rotate-180 duration-300 text-white "
+        } transform transition-transform`}
         onClick={handleToggleSidebar}
       >
-        <RxHamburgerMenu
+        <RiMenuUnfoldLine
          
           fontSize="1.5rem"
           className=" bg-none mt-1"
@@ -52,7 +53,7 @@ setActiveLink(id);
      
       </div>
     
-  <div className={`flex-col gap-5 ${sidebarOpen ? " ":" "}` }>
+  <div className={`flex-col gap-5 ${sidebarOpen ? " ":""}` }>
   <div className='text-left pt-5 pb-3 px-3 b '>
   <h1 className={`text-lg ${sidebarOpen ? "hidden":"block "}`}>Employees</h1>
   </div> 
